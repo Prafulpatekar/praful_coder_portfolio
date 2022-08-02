@@ -33,15 +33,16 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     # 'captcha',
+    'portfolio',
+    'blog',
+    'coderpanel',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'portfolio',
-    'blog',
-    'coderpanel',
+    
 ]
 
 MIDDLEWARE = [
