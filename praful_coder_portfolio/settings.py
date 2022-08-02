@@ -33,9 +33,9 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     # 'captcha',
-    'portfolio',
-    'blog',
-    'coderpanel',
+    'portfolio.apps.PortfolioConfig',
+    'blog.apps.BlogConfig',
+    'coderpanel.apps.CoderpanelConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
