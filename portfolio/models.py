@@ -9,4 +9,4 @@ class ContactModel(models.Model):
     created_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.name
+        return f"Message send by {self.name} with email id {self.email}"
