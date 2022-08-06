@@ -8,7 +8,7 @@ from django.conf import settings
 def index(request):
     roles = RoleNameModel.objects.filter(is_active=True)
     titles = AboutSectionTitleModel.objects.filter(is_active=True)
-    intros = ShortIntroModel.objects.get(is_active=True)
+    intros = ShortIntroModel.objects.filter(is_active=True)
     context = {"roles":roles,"titles":titles,"intros":intros}
     return render(request,"portfolio/index.html",context)
 

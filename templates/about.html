@@ -15,9 +15,11 @@
                   <h1 class="big">About</h1>
                 <h2 class="mb-4">About Me</h2>
                 {% if intros %}
+                {% for intro in intros %}
                 <p>
-                    {{intros.introText|linebreaksbr}}
+                    {{intro.introText|linebreaksbr}}
                 </p>
+                {% endfor %}
                 {% else %}
                 <p>An innovative individual with in-depth knowledge of languages and development tools, seeking a position in a growth-oriented
                     company where I can use my skills to the advantage of the company while having the scope to develop my own skills.
