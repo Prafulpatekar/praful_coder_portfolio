@@ -206,7 +206,7 @@ Short Intro | Praful.Coder
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <form role="form" action="{% url 'editRoleName' intro.id %}" method="POST" autocomplete="off">
+                                    <form role="form" action="{% url 'editShortIntro' intro.id %}" method="POST" autocomplete="off">
                                     <div class="modal-body">
                                         {% comment %} <p class="small">Update row using this form, make sure you fill them all</p> {% endcomment %}
                                             {% csrf_token %}

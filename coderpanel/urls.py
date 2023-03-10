@@ -21,5 +21,6 @@ urlpatterns = [
     path('portfolio/editShortIntro/<str:id>/', views.editShortIntro,name="editShortIntro"),
     path('portfolio/activeShortIntro/<str:id>/', views.activeShortIntro,name="activeShortIntro"),
 
+
     
 ]
