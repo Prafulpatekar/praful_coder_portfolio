@@ -2,7 +2,6 @@
 /static/**
 !/media
 !/static
-# __pycache__
-# */migrations/**
-# !*/migrations
-# !*/migrations/__inti__.py
+env
+venv
+__pycache__
