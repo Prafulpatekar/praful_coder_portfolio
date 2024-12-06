@@ -1,1 +1,1 @@
-web: gunicorn praful_coder_portfolio.wsgi --log-file -
+web: gunicorn src/myportfolio.wsgi --log-file -
