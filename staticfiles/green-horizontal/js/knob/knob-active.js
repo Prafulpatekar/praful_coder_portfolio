@@ -2,18 +2,18 @@
  "use strict";
     /*---------------------
        Circular Bars - Knob
-    --------------------- */	
+    --------------------- */
 	  if(typeof($.fn.knob) != 'undefined') {
 		$('.knob').each(function () {
 		  var $this = $(this),
 			  knobVal = $this.attr('data-rel');
-	
+
 		  $this.knob({
-			'draw' : function () { 
+			'draw' : function () {
 			  $(this.i).val(this.cv + '%')
 			}
 		  });
-		  
+
 		  $this.appear(function() {
 			$({
 			  value: 0
@@ -28,6 +28,6 @@
 			});
 		  }, {accX: 0, accY: -150});
 		});
-    }	
+    }
 
 })(jQuery);

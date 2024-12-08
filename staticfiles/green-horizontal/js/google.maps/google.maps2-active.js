@@ -1,15 +1,15 @@
 
-	
-function initMap() {
-       
 
-       
+function initMap() {
+
+
+
 		map2 = new google.maps.Map(document.getElementById('map2'), {
           center: {lat: -34.397, lng: 150.644},
           zoom: 8
         });
-		
-		
+
+
 		 var mapOptions = {
                 zoom: 12,
                 scrollwheel: false,
@@ -26,13 +26,13 @@ function initMap() {
                 animation: google.maps.Animation.BOUNCE
 
             });
-			
-			
-			
-			
-		
-		
-		
+
+
+
+
+
+
+
         var myLatlng = {lat: -25.363, lng: 131.044};
 
         var map6 = new google.maps.Map(document.getElementById('map86'), {
@@ -45,16 +45,12 @@ function initMap() {
           map: map6,
           title: 'Click to zoom'
         });
-		
+
         var map7 = new google.maps.Map(document.getElementById('map7'), {
           zoom: 4,
           center: {lat: -25.363882, lng: 131.044922 }
         });
 
-		
-		
-      }
-	  
-     
- 
 
+
+      }

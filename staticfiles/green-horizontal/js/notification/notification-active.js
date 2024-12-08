@@ -1,6 +1,6 @@
 (function ($) {
  "use strict";
- 
+
 	/*
 	 * Notifications
 	 */
@@ -45,7 +45,7 @@
 							'</div>'
 		});
 	};
-	
+
 	$('.notification-demo .btn').on('click', function(e){
 		e.preventDefault();
 		var nFrom = $(this).attr('data-from');
@@ -54,9 +54,9 @@
 		var nType = $(this).attr('data-type');
 		var nAnimIn = $(this).attr('data-animation-in');
 		var nAnimOut = $(this).attr('data-animation-out');
-		
+
 		notify(nFrom, nAlign, nIcons, nType, nAnimIn, nAnimOut);
 	});
 
- 
-})(jQuery); 
+
+})(jQuery);

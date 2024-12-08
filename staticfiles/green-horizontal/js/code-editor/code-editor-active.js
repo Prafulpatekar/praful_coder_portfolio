@@ -12,4 +12,4 @@
 		 matchBrackets: true,
 		 styleActiveLine: true
 	 });
-})(jQuery); 
+})(jQuery);

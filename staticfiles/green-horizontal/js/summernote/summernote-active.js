@@ -15,7 +15,7 @@
         })), $(".html-editor-airmod")[0] && $(".html-editor-airmod").summernote({
             airMode: !0
         });
- 
-	
- 
-})(jQuery); 
+
+
+
+})(jQuery);

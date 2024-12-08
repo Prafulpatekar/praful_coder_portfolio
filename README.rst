@@ -4,10 +4,10 @@ Project Setup
 POETRY Setup Instructions
 ==========================
 1. `poetry init`
-2. `poetry add ` 
+2. `poetry add `
 3. `poetry install`
 
-Run command using Poetry 
+Run command using Poetry
 ========================
 1. `poetry run python manage.py runserver` here 'python manage.py runserver' is the command we are running inside poetry. Poetry ensures the consistency.
 

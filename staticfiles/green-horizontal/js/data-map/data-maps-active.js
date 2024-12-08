@@ -1,6 +1,6 @@
 (function ($) {
  "use strict";
- 
+
 		var basic = new Datamap({
                 element: document.getElementById("basic_map"),
                 responsive: true,
@@ -50,7 +50,7 @@
                     NY: { fillKey: "active" },
                 }
             });
-			
+
             var arc_map = new Datamap({
                 element: document.getElementById("arc_map"),
                 responsive: true,
@@ -85,6 +85,6 @@
                     ],
                     { strokeColor: '#00c292', strokeWidth: 1}
             );
-			
-	
-})(jQuery); 
+
+
+})(jQuery);

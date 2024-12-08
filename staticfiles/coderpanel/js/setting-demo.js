@@ -3,7 +3,7 @@
 // Setting Color
 
 $(window).resize(function() {
-	$(window).width(); 
+	$(window).width();
 });
 
 $('.changeBodyBackgroundFullColor').on('click', function(){

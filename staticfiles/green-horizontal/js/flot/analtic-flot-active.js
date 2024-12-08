@@ -1,6 +1,6 @@
 (function ($) {
  "use strict";
- 
+
     var data = [
             [1, 60],
             [2, 30],
@@ -84,8 +84,8 @@
             }).show()
         } else $(".flot-tooltip").hide()
     }), $("<div class='flot-tooltip' class='chart-tooltip'></div>").appendTo("body"))
-	
-	
+
+
     function getRandomData() {
         for (data.length > 0 && (data = data.slice(1)); data.length < totalPoints;) {
             var prev = data.length > 0 ? data[data.length - 1] : 50,
@@ -153,7 +153,7 @@
     }
 
 
-	
+
     function gd(year, month, day) {
         return new Date(year, month - 1, day).getTime()
     }
@@ -293,4 +293,4 @@
     $("#visit-over-time")[0] && $.plot($("#visit-over-time"), dataset, options)
 
 
-})(jQuery); 
+})(jQuery);

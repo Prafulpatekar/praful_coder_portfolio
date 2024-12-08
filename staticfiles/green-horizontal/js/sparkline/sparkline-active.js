@@ -40,5 +40,5 @@
             barSpacing: 2
         });
     }
- 
-})(jQuery); 
+
+})(jQuery);

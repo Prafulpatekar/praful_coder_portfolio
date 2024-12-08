@@ -1,7 +1,7 @@
 (function ($) {
  "use strict";
- 
- 
+
+
 		var $image = $(".image-crop > img")
             $($image).cropper({
                 aspectRatio: 1.618,
@@ -62,7 +62,7 @@
                 $image.cropper("setDragMode", "crop");
             });
 
-	
-	
- 
-})(jQuery); 
+
+
+
+})(jQuery);

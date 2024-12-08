@@ -1,7 +1,7 @@
 /*     Responsive     */
 @media screen and (max-width: 576px) {
   .row-card-no-pd {
-    [class*=col-] { 
+    [class*=col-] {
       .card {
         &:before {
           width: calc(100% - 30px) !important;
@@ -494,4 +494,3 @@
     padding: 20px;
   }
 }
-
