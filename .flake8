@@ -13,6 +13,5 @@ max-linenumber = 500
 max-line-length = 120
 multiline-quotes = double
 per-file-ignores =
-    src/myportfolio/settings/template/settings.dev.py:F821
-    src/myportfolio/settings/template/settings.unittests.py:F821
-    src/myportfolio/settings/post.py:F821
+    myportfolio/myportfolio/settings/template/settings.dev.py:F821
+    myportfolio/myportfolio/settings/template/settings.unittests.py:F821

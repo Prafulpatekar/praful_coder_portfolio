@@ -19,4 +19,4 @@ Makefile commands
 Setup django settings for local
 ===============================
 1. `mkdir local`
-2. `cp src/myportfolio/settings/template/settings.dev.py ./local/settings.dev.py`
+2. `cp myportfolio/myportfolio/settings/template/settings.dev.py ./local/settings.dev.py`

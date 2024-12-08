@@ -15,23 +15,24 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 LOCAL_APPS = [
-    "core_apps.portfolio",
+    "myportfolio.core_apps.portfolio",
 ]
-THIRD_PARTY_APPS: list = []
+THIRD_PARTY_APPS = ["corsheaders", "debug_toolbar", "storages"]
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
-    "django.middleware.security.SecurityMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",  # pip install whitenoise
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = "src.myportfolio.urls"
+ROOT_URLCONF = "myportfolio.myportfolio.urls"
 
 SECRET_KEY = NotImplemented
 TEMPLATES = [
@@ -50,15 +51,35 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "src.myportfolio.wsgi.application"
+WSGI_APPLICATION = "myportfolio.myportfolio.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# if not IN_DOCKER:  # type: ignore
+#     DATABASES = {
+#         "default": {
+#             "ENGINE": "django.db.backends.sqlite3",
+#             "NAME": BASE_DIR / "db.sqlite3",
+#         }
+#     }
+# else:
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'myportfolio',
+        'USER': 'myportfolio',
+        'PASSWORD': 'myportfolio',
+        'HOST': 'localhost',  # will be changed when running in docker
+        'PORT': '5432',
+        'ATOMIC_REQUESTS': True,
+        # TODO(dmu) MEDIUM: Unfortunately Daphne / ASGI / Django Channels do not properly reuse database connections
+        #                   and therefore we are getting resource (connection) leak that leads to the following:
+        #                   django.db.utils.OperationalError: FATAL:  sorry, too many clients already
+        #                   `'CONN_MAX_AGE': 0` is used as workaround. In case it notably affects performance
+        #                   implement a solution that either closes database connections on WebSocket client
+        #                   disconnect and implement connection pooling outside Django (BgBouncer or similar)
+        'CONN_MAX_AGE': 0,
     }
 }
 
@@ -97,8 +118,8 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "prafulpatekar23@gmail.com"
-EMAIL_HOST_PASSWORD = "nmawmlgrjiumndjg"
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/

@@ -6,7 +6,7 @@ For example:
     could then be reffered as a global as:
     IN_DOCKER (where then value would be True)
 """
-from src.utils.general import deep_update, get_settings_from_environment
+from myportfolio.utils.general import deep_update, get_settings_from_environment
 
 from . import ENVVAR_SETTINGS_PREFIX
 

@@ -26,7 +26,6 @@ def deep_update(base_dict: dict, update_with: dict) -> Dict[str, Dict]:
                 base_dict[key] = value
         else:
             base_dict[key] = value
-
     return base_dict
 
 
@@ -53,7 +52,7 @@ def yaml_coerce(value):
            Otherwise, the input value will be returned as is.
     """
     if isinstance(value, str):
-        return yaml.load('dummy: ' + value, Loader=yaml.SafeLoader)['dummy']
+        return yaml.load("dummy: " + value, Loader=yaml.SafeLoader)["dummy"]
 
     return value
 
