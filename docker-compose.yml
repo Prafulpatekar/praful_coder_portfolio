@@ -22,8 +22,8 @@ services:
     depends_on:
       - db
     environment:
-      PORTFOLIO_SETTING_DATABASES: '{"default":{"HOST":"db"}}'
-      PORTFOLIO_SETTING_LOCAL_SETTINGS_PATH: 'local/settings.prod.py'
+      PORTFOLIO_SETTINGS_DATABASES: '{"default":{"HOST":"db"}}'
+      PORTFOLIO_SETTINGS_LOCAL_SETTINGS_PATH: 'local/settings.prod.py'
 
 volumes:
   postgresql-data:

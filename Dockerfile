@@ -22,7 +22,7 @@ COPY ["poetry.lock", "pyproject.toml", "./"]
 RUN poetry install --no-root
 
 # Copy project files
-COPY ["README.md", "Makefile", "./"]
+COPY ["staticfiles","README.md", "Makefile", "./"]
 COPY myportfolio myportfolio
 COPY local local
 

@@ -73,16 +73,9 @@ DATABASES = {
         'HOST': 'localhost',  # will be changed when running in docker
         'PORT': '5432',
         'ATOMIC_REQUESTS': True,
-        # TODO(dmu) MEDIUM: Unfortunately Daphne / ASGI / Django Channels do not properly reuse database connections
-        #                   and therefore we are getting resource (connection) leak that leads to the following:
-        #                   django.db.utils.OperationalError: FATAL:  sorry, too many clients already
-        #                   `'CONN_MAX_AGE': 0` is used as workaround. In case it notably affects performance
-        #                   implement a solution that either closes database connections on WebSocket client
-        #                   disconnect and implement connection pooling outside Django (BgBouncer or similar)
         'CONN_MAX_AGE': 0,
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -102,18 +95,13 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalization
-# https://docs.djangoproject.com/en/4.0/topics/i18n/
-
 LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "Asia/Kolkata"
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
+# Email Settings
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
@@ -134,12 +122,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "staticfiles"),
 ]
 
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
+FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# RECAPTCHA_PUBLIC_KEY = 'MyRecaptchaKey123'
-# RECAPTCHA_PRIVATE_KEY = 'MyRecaptchaPrivateKey456'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
