@@ -1,9 +1,11 @@
 import os
+from typing import List
 
 from . import BASE_DIR
 
 ALLOWED_HOSTS = ["*"]
 DEBUG = False
+CSRF_TRUSTED_ORIGINS: List[str] = []
 
 # Application definition
 DJANGO_APPS = [
