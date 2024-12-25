@@ -54,3 +54,7 @@ docker-prod-up:
 .PHONY: docker-prod-down
 docker-prod-down:
 	docker-compose -f docker-compose.yml down
+
+.PHONY: shell
+shell:
+	poetry run python -m myportfolio.manage shell
