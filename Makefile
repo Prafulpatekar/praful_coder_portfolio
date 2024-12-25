@@ -20,7 +20,7 @@ migrate:
 
 .PHONY: run-server
 run-server:
-	poetry run python -m myportfolio.manage runserver
+	poetry run python -m myportfolio.manage runserver 0.0.0.0:8080
 
 .PHONY: superuser
 superuser:
@@ -41,3 +41,16 @@ lint:
 docker-up:
 	test -f .env || touch .env
 	docker-compose -f docker-compose.dev.yml up --force-recreate db -d
+
+.PHONY: docker-down
+docker-down:
+	docker-compose -f docker-compose.dev.yml down
+
+# PROD
+.PHONY: docker-prod-up
+docker-prod-up:
+	docker-compose -f docker-compose.yml up --force-recreate prod-db app -d
+
+.PHONY: docker-prod-down
+docker-prod-down:
+	docker-compose -f docker-compose.yml down

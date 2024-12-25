@@ -21,15 +21,15 @@ THIRD_PARTY_APPS = ["corsheaders", "debug_toolbar", "storages"]
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
 ROOT_URLCONF = "myportfolio.myportfolio.urls"
@@ -65,15 +65,15 @@ WSGI_APPLICATION = "myportfolio.myportfolio.wsgi.application"
 #     }
 # else:
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'myportfolio',
-        'USER': 'myportfolio',
-        'PASSWORD': 'myportfolio',
-        'HOST': 'localhost',  # will be changed when running in docker
-        'PORT': '5432',
-        'ATOMIC_REQUESTS': True,
-        'CONN_MAX_AGE': 0,
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "myportfolio",
+        "USER": "myportfolio",
+        "PASSWORD": "myportfolio",
+        "HOST": "localhost",  # will be changed when running in docker
+        "PORT": "5433",
+        "ATOMIC_REQUESTS": True,
+        "CONN_MAX_AGE": 0,
     }
 }
 # Password validation
@@ -113,14 +113,11 @@ EMAIL_HOST_PASSWORD = ""
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = "/static/"
-
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "staticfiles")]
+
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "staticfiles"),
-]
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB

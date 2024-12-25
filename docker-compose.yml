@@ -1,8 +1,8 @@
-version: '3.9'
+version: '3'
 
 services:
 
-  db:
+  prod-db:
     image: postgres:14.2-alpine
     restart: unless-stopped
     ports:
@@ -12,7 +12,7 @@ services:
       POSTGRES_USER: myportfolio
       POSTGRES_PASSWORD: myportfolio
     volumes:
-      - postgresql-data:/var/lib/postgresql/data
+      - postgresql-prod-data:/var/lib/postgresql/data
 
   app:
     build: .
@@ -20,11 +20,11 @@ services:
     ports:
       - '8000:8000'
     depends_on:
-      - db
+      - prod-db
     environment:
-      PORTFOLIO_SETTINGS_DATABASES: '{"default":{"HOST":"db"}}'
+      PORTFOLIO_SETTINGS_DATABASES: '{"default":{"HOST":"prod-db","PORT":"5432"}}'
       PORTFOLIO_SETTINGS_LOCAL_SETTINGS_PATH: 'local/settings.prod.py'
 
 volumes:
-  postgresql-data:
+  postgresql-prod-data:
     driver: local
