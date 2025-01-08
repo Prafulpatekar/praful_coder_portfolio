@@ -58,3 +58,7 @@ docker-prod-down:
 .PHONY: shell
 shell:
 	poetry run python -m myportfolio.manage shell
+
+.PHONY: test
+test:
+	poetry run pytest -v -rs -n auto --show-capture=no

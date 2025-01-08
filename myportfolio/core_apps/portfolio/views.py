@@ -34,7 +34,7 @@ def contact(request):
                 f"Hi {name},\nThank you for contacting me!If you’re looking for a web designer to reconstruct your"
                 f"business website or need to develop a web application for your buisness, then you can hire me.\n"
                 f"I’ve worked with a lot of great brands and small businesses over the past 1 years.\n"
-                f"You can check out some of my work on my portfolio at https://praful-coder-portfolio.herokuapp.com/."
+                f"You can check out some of my work on my portfolio at https://portfolio.praful-patekar.xyz/."
                 f"If you’re interested, I’d love to discuss more details.\n\n\n\nKind regards,\nPraful Patekar"
             )
             send_mail(mysub, mymsg, settings.EMAIL_HOST_USER, [email], fail_silently=False)
