@@ -28,6 +28,9 @@ jobs:
       # checks out the repository using the checkout action
       - uses: actions/checkout@v2
 
+      - name: Install Git
+        run: apt-get update && apt-get install -y git
+
       - name: Install Poetry
         uses: abatilo/actions-poetry@v2.0.0
         with:
@@ -42,5 +45,5 @@ jobs:
       - name: Test
         run: make test
         env:
-          COOKING_CORE_SETTING_DATABASES: '{"default":{"HOST":"db"}}'
-          COOKING_CORE_SETTING_LOCAL_SETTINGS_PATH: './myportfolio/myportfolio/settings/templates/settings.github.py'
+          PORTFOLIO_SETTINGS_DATABASES: '{"default":{"HOST":"db"}}'
+          PORTFOLIO_SETTINGS_LOCAL_SETTINGS_PATH: './myportfolio/myportfolio/settings/templates/settings.github.py'
