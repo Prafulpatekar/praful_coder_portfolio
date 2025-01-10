@@ -211,7 +211,7 @@
 		padding-top: 12.5px;
 		border-top: 1px solid;
 		border-color: rgba(255, 255, 255, 0.1) !important;
-		.info { 
+		.info {
 			a > span {
 				color: #fff;
 				.user-level {
@@ -436,4 +436,3 @@
 .sidebar[data-background-color="red2"] {
 	@include sidebar-color-style2($danger2-color);
 }
-

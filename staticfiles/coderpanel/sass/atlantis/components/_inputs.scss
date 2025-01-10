@@ -66,7 +66,7 @@
 .form-control:-moz-placeholder { color:inherit;opacity:.7 }
 .form-control::-moz-placeholder { color:inherit;opacity:.7 }
 .form-control:-ms-input-placeholder { color:inherit;opacity:.7 }
-.form-control::-ms-input-placeholder { color:inherit;opacity:.7 }  
+.form-control::-ms-input-placeholder { color:inherit;opacity:.7 }
 
 .input-group-text {
   border-color : #ebedf2 !important;
@@ -408,7 +408,7 @@
     font-weight: $font-weight-normal;
     top: 12px;
   }
-  
+
   .form-control:focus + .placeholder, .form-control:valid + .placeholder, .form-control.filled + .placeholder {
     font-size: 85% !important;
     transform: translate3d(0, -10px, 0);
@@ -442,7 +442,7 @@
   width: 100% !important;
 }
 
-.has-success { 
+.has-success {
   label {
     color: $success-color !important;
   }

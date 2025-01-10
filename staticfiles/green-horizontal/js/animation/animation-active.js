@@ -1,6 +1,6 @@
 (function ($) {
  "use strict";
- 
+
 	/*----------------------
 		Animation active js
 	 -----------------------*/
@@ -324,5 +324,5 @@
 			$(this).removeClass("animated zoomIn");
 		});
 	});
- 
-})(jQuery); 
+
+})(jQuery);

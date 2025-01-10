@@ -188,7 +188,7 @@
 /*      Button Border     */
 @mixin btn-border($color) {
   color: $color !important;
-  border: 1px solid $color !important;  
+  border: 1px solid $color !important;
 }
 
 .btn-border {
@@ -210,7 +210,7 @@
   }
   &.btn-info {
     @include btn-border($info-color);
-  }  
+  }
   &.btn-success {
     @include btn-border($success-color);
   }

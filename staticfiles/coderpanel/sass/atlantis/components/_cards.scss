@@ -141,7 +141,7 @@
         font-weight: $font-weight-normal;
       }
       .status{
-        font-size: 11px; 
+        font-size: 11px;
         color: #7d7b7b;
       }
     }
@@ -714,7 +714,7 @@ label {
 }
 
 .col-cardProduct {
-  width: 225px; 
+  width: 225px;
   padding: 0 10px;
   display: inline-block;
 }
@@ -1027,10 +1027,10 @@ label {
   }
   @mixin accordion-style($color) {
     .card-header{
-      color: $color; 
+      color: $color;
       @extend %accordion-fontsize;
       .btn-link{
-        color: $color !important; 
+        color: $color !important;
         @extend %accordion-fontsize;
       }
     }

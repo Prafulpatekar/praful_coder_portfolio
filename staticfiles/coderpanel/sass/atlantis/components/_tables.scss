@@ -136,7 +136,7 @@
 @mixin table-bg-state($color){
   background: $color !important;
   color: $white-color !important;
-  border: 0px !important;  
+  border: 0px !important;
 }
 
 .table-head-bg-default thead th, .table-striped-bg-default tbody tr:nth-of-type(odd) {
