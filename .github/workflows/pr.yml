@@ -34,7 +34,10 @@ jobs:
           poetry-version: 1.4.2
 
       - name: Install Dependencies
-        run: make install && make install-pre-commit
+        run: make install
+
+      - name: Set up pre-commit
+        run: make install-pre-commit
 
       - name: Lint
         run: make lint
