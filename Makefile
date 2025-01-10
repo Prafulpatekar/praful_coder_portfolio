@@ -5,9 +5,6 @@ install:
 
 .PHONY: install-pre-commit
 install-pre-commit:
-	poetry run pre-commit clean;
-	poetry run pre-commit autoupdate;
-	poetry run pre-commit uninstall;
 	poetry run pre-commit install;
 
 .PHONY: migrations
