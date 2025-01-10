@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # run inside a Python 3.10.4 Docker container, specifically one based on Debian Buster
-    container: python:3.12-rc-buster
+    container: python:3.10.4-buster
 
     # section where background services needed by the job are defined (spun up in a separate Docker container)
     services:
