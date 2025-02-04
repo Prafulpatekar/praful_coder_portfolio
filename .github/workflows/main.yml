@@ -39,4 +39,6 @@ jobs:
           END
       - name: Run deploy
         run: |
-          ssh target "cd praful_coder_portfolio/ && docker-compose down && git pull && docker-compose build && docker-compose up -d --force-recreate"
+          # ssh target "cd praful_coder_portfolio/ && docker-compose down && git pull && docker-compose build && docker-compose up -d --force-recreate"
+          ssh target "cd praful_coder_portfolio/ && docker-compose down && git fetch --all && git reset --hard origin/develop && git pull && docker-compose build && docker-compose up -d --force-recreate"
+
